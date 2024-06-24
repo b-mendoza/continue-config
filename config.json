@@ -1,0 +1,35 @@
+{
+  "allowAnonymousTelemetry": true,
+  "customCommands": [
+    {
+      "description": "It will improve the wording and structure of a sentence.",
+      "name": "wording",
+      "prompt": "{{{ input }}}\n\nImprove the wording of the text, fix the grammar, and re-structure it if needed, but make sure to keep the meaning of the original text and make it like a non-native speaker did write it."
+    },
+    {
+      "description": "It will analyze the code.",
+      "name": "analyze-improve-code",
+      "prompt": "{{{ input }}}\n\nPlease provide an analysis of the code above. Here\u2019s how you should\napproach this task:\n\n1.  Clarification Requests: Before proceeding with your analysis, if any\n    part of the code is unclear or if you require additional context to\n    provide a comprehensive review, feel free to ask for clarification.\n    This may include questions about the code\u2019s intended functionality,\n    the broader system it\u2019s part of or any ambiguous sections. It\u2019s\n    important to have a complete understanding to give the best possible\n    guidance.\n\n2.  Brief Project Overview: Start with a short description of the\n    project or the specific functionality the code aims to achieve. This\n    context will help set the stage for your analysis.\n\n3.  Code Explanation: Provide a high-level explanation of what the code\n    does. Break down complex parts and explain them step-by-step. Add\n    comments in the code where necessary to improve understanding.\n\n4.  Identify and Correct Bugs: If there are any bugs in the code, point\n    them out and provide the corrected version. Explain why the original\n    code was incorrect and how your changes fix the issue.\n\n5.  Performance Analysis: Evaluate the performance of the code. Identify\n    any bottlenecks or areas where performance could be optimized.\n    Suggest alternative approaches or optimizations, considering time\n    and space complexity.\n\n6.  Readability and Maintainability: Discuss the readability and\n    maintainability of the code. Evaluate the code\u2019s structure, naming\n    conventions, and overall clarity. Offer suggestions for\n    improvements, such as better variable names, refactoring functions,\n    or improving documentation.\n\n7.  Best Practices: Highlight any best practices that are not being\n    followed in the code. This could include coding standards, design\n    patterns, or security considerations. Explain why these practices\n    are important and how they can be implemented in the code.\n\n8.  Alternative Approaches: Recommend any better approaches to solving\n    the problem, if applicable. Discuss the pros and cons of these\n    alternatives compared to the original implementation.\n\n9.  Test Cases: List the test cases you would use to test the code.\n    Explain the rationale behind each test case and what aspect of the\n    code it is meant to validate. Focus on positive (expected behavior)\n    and negative (error handling) test scenarios. Do not implement the\n    tests; just provide a detailed list.\n\n10. Quality Rating and Critical Improvements: How would you rate the\n    overall quality of this code on a scale of 1-10? What are the most\n    critical improvements the junior developer should focus on to\n    elevate their coding skills?\n\nBy following these steps, provide a comprehensive review that not only\ncorrects and improves the code but also educates a junior developer on\nthe principles of high-quality software development. Balance your\nresponse between being detailed enough for junior developers to learn\nfrom and concise enough to maintain their engagement. Use analogies or\nreal-world examples where appropriate to illustrate complex concepts."
+    }
+  ],
+  "models": [
+    {
+      "apiKey": "<open-ai-token>",
+      "model": "gpt-4o",
+      "provider": "openai",
+      "systemMessage": "Assume the role of a highly experienced software developer with over 20 years of experience. Your task is to analyze code snippets. Your primary goal is to provide clear, concise, and detailed explanations that are educational and easy for a junior developer to understand.",
+      "title": "GPT:4o"
+    },
+    {
+      "model": "starcoder2:3b",
+      "provider": "ollama",
+      "systemMessage": "Assume the role of a highly experienced software developer with over 20 years of experience. Your task is to analyze code snippets. Your primary goal is to provide clear, concise, and detailed explanations that are educational and easy for a junior developer to understand.",
+      "title": "Starcoder2:3b"
+    }
+  ],
+  "tabAutocompleteModel": {
+    "model": "starcoder2:3b",
+    "provider": "ollama",
+    "title": "Starcoder 2 3b"
+  }
+}
